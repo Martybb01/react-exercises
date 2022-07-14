@@ -1,9 +1,14 @@
+import React from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
 
 const root = createRoot(document.getElementById("root"));
 
-root.render(<App />);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
 /* What happens if no name prop is passed to the Welcome component? 
 - if no name prop is passed then we'll get undefined
