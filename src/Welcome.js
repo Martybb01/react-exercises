@@ -5,10 +5,7 @@ export class Welcome extends React.Component {
   render() {
     return (
       <div>
-        <p>
-          Welcome, {this.props.name === "John" && this.props.name}!
-          <Age age={21} />
-        </p>
+        <p>Welcome, {this.props.name}!</p>
       </div>
     );
   }
