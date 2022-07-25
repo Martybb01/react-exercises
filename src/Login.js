@@ -13,6 +13,13 @@ export class Login extends React.Component {
     const checked = event.target.checked;
     this.setState({ [name]: type === "checkbox" ? checked : value });
   };
+  onLogin = () => {
+    console.log(this.state);
+    this.setState({
+      username: this.state.username,
+      password: this.state.password,
+    });
+  };
 
   render() {
     return (
@@ -31,13 +38,22 @@ export class Login extends React.Component {
           value={this.state.password}
           onChange={this.handleInputChange}
         ></input>
-        <label>Remeber:</label>
+        <label>Remember:</label>
         <input
           type="checkbox"
           name="remember"
           checked={this.state.remember}
           onChange={this.handleInputChange}
         ></input>
+        <br />
+        <button
+          name="login"
+          type="submit"
+          onClick={this.onLogin}
+          disabled={!(this.state.password && this.state.username)}
+        >
+          Login
+        </button>
       </div>
     );
   }
