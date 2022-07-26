@@ -31,6 +31,7 @@ export class Login extends React.Component {
   render() {
     return (
       <div>
+        <h4>Controlled form</h4>
         <label>Username:</label>
         <input
           type="text"
