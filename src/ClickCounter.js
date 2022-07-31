@@ -15,8 +15,11 @@ export class ClickCounter extends React.Component {
     });
   };
   render() {
+    const CounterStyle = {
+      color: this.state.count < 5 ? "red" : "green",
+    };
     return (
-      <div>
+      <div style={CounterStyle}>
         <p>{this.state.count}</p>
         <button onClick={this.handleClickEvent}>Increment</button>
       </div>
