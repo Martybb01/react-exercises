@@ -2,6 +2,7 @@ import React from "react";
 import { Age } from "./Age";
 import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
+import { Container } from "./Container";
 import { Counter } from "./Counter";
 import { Hello } from "./Hello";
 import { InteractiveWelcome } from "./InteractiveWelcome";
@@ -13,7 +14,7 @@ import { Welcome } from "./Welcome";
 export class App extends React.Component {
   render() {
     return (
-      <div>
+      <Container>
         <Hello />
         <Welcome name="marti" />
         <Age age={21} />
@@ -24,7 +25,7 @@ export class App extends React.Component {
         <Login />
         <UncontrolledLogin />
         <TodoList />
-      </div>
+      </Container>
     );
   }
 }
