@@ -21,13 +21,26 @@ export class TodoList extends React.Component {
       items: [],
     });
   };
+
   render() {
     return (
       <div>
         <div>
           <ul>
             {this.state.items.map((item, index) => (
-              <li key={item + index}>{item}</li>
+              <li key={item + index}>
+                {item}
+                <button
+                  onClick={() => {
+                    this.state.items.splice(index, 1);
+                    this.setState({
+                      items: this.state.items,
+                    });
+                  }}
+                >
+                  Remove Item
+                </button>
+              </li>
             ))}
           </ul>
         </div>
