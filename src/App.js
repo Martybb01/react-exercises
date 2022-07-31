@@ -14,7 +14,7 @@ import { Welcome } from "./Welcome";
 export class App extends React.Component {
   render() {
     return (
-      <Container>
+      <Container title={<h2>React</h2>}>
         <Hello />
         <Welcome name="marti" />
         <Age age={21} />
