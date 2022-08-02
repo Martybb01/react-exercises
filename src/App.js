@@ -25,7 +25,7 @@ export class App extends React.Component {
   render() {
     return (
       <Container title={<h2>React</h2>}>
-        <LanguageContext.Provider>
+        <LanguageContext.Provider value={this.state.language}>
           <select
             value={this.state.language}
             onChange={this.handleLanguageChange}
