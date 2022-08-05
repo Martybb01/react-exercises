@@ -9,24 +9,15 @@ export function Counter({
   const [count, setCount] = useState(initialValue);
 
   useEffect(() => {
-    incrementCounter();
-
-    return () => {
-      clearInterval({ incrementValue });
-    };
-  });
-
-  const incrementCounter = () => {
-    setInterval(() => {
-      setCount((count) => count + incrementValue);
+    const interval = setInterval(() => {
+      setCount(count + incrementValue);
     }, timeout);
-  };
+    return () => {
+      clearInterval(interval);
+    };
+  }, [count, timeout, incrementValue]);
 
-  return (
-    <div>
-      <CounterDisplay count={count} />
-    </div>
-  );
+  return <CounterDisplay count={count} />;
 }
 
 // export class Counter extends React.Component {
