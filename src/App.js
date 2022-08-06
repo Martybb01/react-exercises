@@ -13,6 +13,7 @@ import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 import { Sum } from "./Sum";
+import { GithubUser } from "./GithubUser";
 
 export class App extends React.Component {
   state = {
@@ -39,6 +40,7 @@ export class App extends React.Component {
         <Hello />
         <Welcome name="marti" />
         <Age age={21} />
+        <GithubUser username="Martybb01" />
         <Counter />
         <ClickCounter initialValue={0} incrementBy={1} />
         <ClickTracker />
