@@ -14,6 +14,7 @@ import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 import { Sum } from "./Sum";
 import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 
 export class App extends React.Component {
   state = {
@@ -41,6 +42,7 @@ export class App extends React.Component {
         <Welcome name="marti" />
         <Age age={21} />
         <GithubUser username="Martybb01" />
+        <GithubUserList />
         <Counter />
         <ClickCounter initialValue={0} incrementBy={1} />
         <ClickTracker />
