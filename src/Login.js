@@ -1,26 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
+import { useLogin } from "./useLogin";
 
 export function Login() {
-  const [data, setData] = useState({
-    username: "",
-    password: "",
-    remember: false,
-  });
+  const { data, onInputChange } = useLogin();
 
-  function handleInputChange(event) {
-    const { name, type, value, checked } = event.target;
+  console.log(
+    `Your username is ${data.username} and your password is ${data.password}`
+  );
 
-    setData((data) => {
-      return {
-        ...data,
-        [name]: type === "checkbox" ? checked : value,
-      };
-    });
-  }
-
-  function handleFormLogin() {
-    console.log(data);
-  }
+  // handleFormLogin() {
+  //   console.log(data);
+  // }
 
   return (
     <div>
@@ -30,31 +20,31 @@ export function Login() {
         <input
           name="username"
           value={data.username}
-          onChange={handleInputChange}
+          onChange={onInputChange}
         ></input>
         <label>Password: </label>
         <input
           name="password"
           type="password"
           value={data.password}
-          onChange={handleInputChange}
+          onChange={onInputChange}
         ></input>
-        <label>Remember: </label>
+        {/* <label>Remember: </label>
         <input
           name="remember"
           type="checkbox"
           checked={data.remember}
-          onChange={handleInputChange}
+          onChange={onInputChange}
         ></input>
-        <br />
-        <button
+        <br /> */}
+        {/* <button
           name="login"
           type="submit"
           onClick={handleFormLogin}
           disabled={!data.password && data.username}
         >
           Login
-        </button>
+        </button> */}
       </form>
     </div>
   );
