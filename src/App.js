@@ -44,7 +44,7 @@ export class App extends React.Component {
         <GithubUser username="Martybb01" />
         <GithubUserList />
         <Counter />
-        <ClickCounter initialValue={0} incrementBy={1} />
+        <ClickCounter />
         <ClickTracker />
         <InteractiveWelcome />
         <Login />

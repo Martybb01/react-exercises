@@ -1,19 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useCounter } from "./useCounter";
 
 export function ClickCounter({ initialValue = 0 }) {
-  const [counter, setCounter] = useState(initialValue);
-
-  const handleCounterIncrement = () => {
-    setCounter((c) => c + 1);
-  };
-
-  function onCounterChange(value) {
-    console.log(`The counter is: ${value}`);
-  }
-
-  useEffect(() => {
-    onCounterChange(counter);
-  }, [counter]);
+  const { counter, onIncrement, onDecrement, onReset } =
+    useCounter(initialValue);
 
   const CounterStyle = {
     color: counter < 5 ? "red" : "green",
@@ -22,7 +12,9 @@ export function ClickCounter({ initialValue = 0 }) {
   return (
     <div style={CounterStyle}>
       <p> {counter} </p>
-      <button onClick={handleCounterIncrement}>Increment</button>
+      <button onClick={onIncrement}>Increment</button>
+      <button onClick={onDecrement}>Decrement</button>
+      <button onClick={onReset}>Reset</button>
     </div>
   );
 }
