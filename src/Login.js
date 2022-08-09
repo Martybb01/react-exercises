@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useLogin } from "./useLogin";
 
 export function Login() {
   const { data, onInputChange } = useLogin();
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  });
 
   console.log(
     `Your username is ${data.username} and your password is ${data.password}`
@@ -18,6 +23,7 @@ export function Login() {
       <form>
         <label>Username: </label>
         <input
+          ref={inputRef}
           name="username"
           value={data.username}
           onChange={onInputChange}
