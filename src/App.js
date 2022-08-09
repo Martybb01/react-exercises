@@ -15,6 +15,7 @@ import { Welcome } from "./Welcome";
 import { Sum } from "./Sum";
 import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
+import { FilteredList } from "./FilteredList";
 
 export class App extends React.Component {
   state = {
@@ -25,6 +26,7 @@ export class App extends React.Component {
       language: event.target.value,
     });
   };
+
   render() {
     return (
       <Container title={<h2>React</h2>}>
@@ -49,6 +51,7 @@ export class App extends React.Component {
         <InteractiveWelcome />
         <Login />
         <UncontrolledLogin />
+        <FilteredList list={this.props.list} />
         <TodoList
           render={(items) => {
             return (
