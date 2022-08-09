@@ -16,6 +16,7 @@ import { Sum } from "./Sum";
 import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 import { FilteredList } from "./FilteredList";
+import { CarDetails } from "./CarDetails";
 
 export class App extends React.Component {
   state = {
@@ -51,6 +52,11 @@ export class App extends React.Component {
         <InteractiveWelcome />
         <Login />
         <UncontrolledLogin />
+        <h4>Car form:</h4>
+        <CarDetails
+          initialData={{ model: "Tesla", year: 2021, color: "red" }}
+        />
+
         <FilteredList list={this.props.list} />
         <TodoList
           render={(items) => {
