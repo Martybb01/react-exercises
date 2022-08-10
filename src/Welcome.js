@@ -1,9 +1,9 @@
 import React from "react";
 
-export function Welcome(props) {
+export function Welcome({ name = "World" }) {
   return (
     <div>
-      <p>Welcome, {props.name}!</p>
+      <p>Welcome, {name}!</p>
     </div>
   );
 }
