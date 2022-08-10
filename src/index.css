@@ -3,7 +3,7 @@
   color: cornflowerblue;
 }
 .container {
-  background-color: white;
+  background-color: snow;
   border: 2px solid red;
   padding: 0px 20px 20px 20px;
   margin: 0 auto;
@@ -14,6 +14,7 @@
   color: dodgerblue;
   margin-top: 5px;
 }
+
 a {
   color: dodgerblue;
   text-decoration: none;

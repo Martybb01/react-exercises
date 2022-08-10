@@ -14,7 +14,8 @@ export function App() {
             <h1>My awesome App</h1>
             <div>
               <Link to="/">Home</Link> |
-              <Link to="users/:username">GithubUser</Link>
+              <Link to="users/:username">GithubUser</Link> |
+              <Link to="/counter">Counter</Link>
             </div>
           </div>
         }
