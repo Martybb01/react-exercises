@@ -1,16 +1,28 @@
 import { React } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { Container } from "./Container";
 import { Welcome } from "./Welcome";
 import { ClickCounter } from "./ClickCounter";
+import { ShowGithubUser } from "./ShowGithubUser";
 
 export function App() {
   return (
     <div>
-      <Container title="My awesome App">
+      <Container
+        title={
+          <div>
+            <h1>My awesome App</h1>
+            <div>
+              <Link to="/">Home</Link> |
+              <Link to="users/:username">GithubUser</Link>
+            </div>
+          </div>
+        }
+      >
         <Routes>
           <Route path="/" element={<Welcome name="Martina" />} />
           <Route path="/counter" element={<ClickCounter />} />
+          <Route path="users/:username" element={<ShowGithubUser />} />
         </Routes>
       </Container>
     </div>

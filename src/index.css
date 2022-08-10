@@ -12,6 +12,13 @@
 .container-title {
   text-align: center;
   color: dodgerblue;
-  text-decoration: underline;
   margin-top: 5px;
+}
+a {
+  color: dodgerblue;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: red;
 }
