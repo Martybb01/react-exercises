@@ -2,6 +2,7 @@ import { React } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Container } from "./Container";
 import { Welcome } from "./Welcome";
+import { ClickCounter } from "./ClickCounter";
 
 export function App() {
   return (
@@ -9,6 +10,7 @@ export function App() {
       <Container title="My awesome App">
         <Routes>
           <Route path="/" element={<Welcome name="Martina" />} />
+          <Route path="/counter" element={<ClickCounter />} />
         </Routes>
       </Container>
     </div>

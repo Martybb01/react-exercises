@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function Welcome({ name = "World" }) {
   return (
     <div>
+      <Link to="/counter">Go to Counter</Link>
       <p>Welcome, {name}!</p>
     </div>
   );
