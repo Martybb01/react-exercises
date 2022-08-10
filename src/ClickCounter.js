@@ -12,7 +12,7 @@ export function ClickCounter({ initialValue = 0 }) {
 
   return (
     <div style={CounterStyle}>
-      <Link to="/">Go to Welcome</Link>
+      <Link to="/">Back</Link>
       <p> {counter} </p>
       <button onClick={onIncrement}>Increment</button>
       <button onClick={onDecrement}>Decrement</button>
