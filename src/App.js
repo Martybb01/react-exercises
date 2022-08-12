@@ -4,6 +4,8 @@ import { Container } from "./Container";
 import { Welcome } from "./Welcome";
 import { ClickCounter } from "./ClickCounter";
 import { ShowGithubUser } from "./ShowGithubUser";
+import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 
 export function App() {
   return (
@@ -13,8 +15,7 @@ export function App() {
           <div>
             <h1>My awesome App</h1>
             <div>
-              <Link to="/">Home</Link> |
-              <Link to="users/:username">GithubUser</Link> |
+              <Link to="/">Home</Link> |<Link to="users/">GithubUser</Link> |
               <Link to="/counter">Counter</Link>
             </div>
           </div>
@@ -23,7 +24,9 @@ export function App() {
         <Routes>
           <Route path="/" element={<Welcome name="Martina" />} />
           <Route path="/counter" element={<ClickCounter />} />
-          <Route path="users/:username" element={<ShowGithubUser />} />
+          <Route path="/users" element={<GithubUserList />}>
+            <Route path=":username" element={<ShowGithubUser />} />
+          </Route>
           <Route
             path="*"
             element={
