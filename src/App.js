@@ -4,7 +4,6 @@ import { Container } from "./Container";
 import { Welcome } from "./Welcome";
 import { ClickCounter } from "./ClickCounter";
 import { ShowGithubUser } from "./ShowGithubUser";
-import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 
 export function App() {
