@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { GithubUser } from "./GithubUser";
 import { ShowGithubUser } from "./ShowGithubUser";
 
@@ -28,7 +28,12 @@ export function GithubUserList() {
           </li>
         ))}
       </ul>
-      <input name="username" onChange={handleInputChange}></input>
+      <Outlet />
+      <input
+        name="username"
+        placeholder="please insert a username"
+        onChange={handleInputChange}
+      ></input>
       <button onClick={handleAdd}>Add user</button>
       <button onClick={handleRemove}>Remove user</button>
     </div>
