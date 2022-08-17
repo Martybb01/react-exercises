@@ -11,7 +11,10 @@ export class Login extends React.Component {
     const name = event.target.name;
     const type = event.target.type;
     const checked = event.target.checked;
-    this.setState({ [name]: type === "checkbox" ? checked : value });
+    this.setState({
+      ...this.state,
+      [name]: type === "checkbox" ? checked : value,
+    });
   };
 
   render() {
